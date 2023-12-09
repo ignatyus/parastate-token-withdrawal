@@ -1,0 +1,31 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>ParaState</title>
+    <script src="https://cdn.ethers.io/scripts/ethers-v3.min.js"
+            charset="utf-8"
+            type="text/javascript">
+    </script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Welcome to ParaState Withdrawall App</h1>
+    <p>This website allows you to connect to your MetaMask wallet and withdraw your STATE tokens.</p>
+    <button id="connectButton">Connect to MetaMask</button>
+    <button id="withdrawButton">Withdraw All</button>
+    <script>
+        const
+            connectButton = document.getElementById('connectButton'),
+            withdrawButton = document.getElementById('withdrawButton')
+
+        connectButton.addEventListener('click', async () => {
+            connectMetaMask()
+        })
+
+        withdrawButton.addEventListener('click', function() {
+            withdrawAll();
+        })
+    </script>
+</body>
+</html>
